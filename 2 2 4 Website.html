@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>✞ THE 224 DISCIPLES ✞</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,Arial,sans-serif;
+}
+
+body{
+    background:#02050B;
+    color:#EAF4FF;
+    overflow-x:hidden;
+}
+
+/* Background */
+.bg{
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top,#0A1A35 0%,#02050B 60%),
+    linear-gradient(to bottom,#02050B,#000000);
+    z-index:-2;
+}
+
+/* Floating particles */
+.particle{
+    position:fixed;
+    width:3px;
+    height:3px;
+    background:#4DA6FF;
+    border-radius:50%;
+    box-shadow:0 0 10px #4DA6FF;
+    animation:float 12s linear infinite;
+    opacity:.7;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(110vh);
+    }
+    to{
+        transform:translateY(-20vh);
+    }
+}
+
+/* Navbar */
+nav{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(0,0,0,.35);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid #12345A;
+}
+
+.logo{
+    font-size:1.4rem;
+    font-weight:700;
+    color:#5EAFFF;
+    text-shadow:0 0 15px #2F80FF;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:#D6E8FF;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#5EAFFF;
+    text-shadow:0 0 12px #5EAFFF;
+}
+
+/* Hero */
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:4.5rem;
+    margin-bottom:20px;
+    color:#77BBFF;
+    text-shadow:
+    0 0 20px #2D7DFF,
+    0 0 50px #2D7DFF;
+}
+
+.hero h2{
+    font-size:1.4rem;
+    margin-bottom:30px;
+    color:#A9D3FF;
+    letter-spacing:4px;
+}
+
+.hero p{
+    color:#C6DFFF;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+/* Buttons */
+.btns{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 30px;
+    border-radius:10px;
+    text-decoration:none;
+    transition:.3s;
+    font-weight:600;
+}
+
+.primary{
+    background:#0B3D91;
+    color:white;
+    box-shadow:0 0 20px #0B5FFF;
+}
+
+.primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 35px #1D75FF;
+}
+
+.secondary{
+    border:1px solid #1D75FF;
+    color:#8FC6FF;
+}
+
+.secondary:hover{
+    background:#08111F;
+}
+
+/* Cards */
+.section{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.3rem;
+    margin-bottom:50px;
+    color:#78BFFF;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(9,19,33,.75);
+    border:1px solid #12345A;
+    border-radius:18px;
+    padding:30px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 0 25px rgba(29,117,255,.35);
+}
+
+.card h3{
+    color:#6EB6FF;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#C8DFFF;
+    line-height:1.7;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:40px;
+    border-top:1px solid #12345A;
+    margin-top:40px;
+    color:#7DAFE8;
+}
+
+.glow{
+    color:#5EAFFF;
+    text-shadow:0 0 20px #2D7DFF;
+}
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<script>
+for(let i=0;i<60;i++){
+    let p=document.createElement("div");
+    p.className="particle";
+    p.style.left=Math.random()*100+"vw";
+    p.style.animationDuration=(8+Math.random()*12)+"s";
+    p.style.animationDelay=Math.random()*10+"s";
+    document.body.appendChild(p);
+}
+</script>
+
+<nav>
+    <div class="logo">✞ 224 ✞</div>
+
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Members</a>
+        <a href="#">Gallery</a>
+        <a href="#">Discord</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>✞ THE 224 DISCIPLES ✞</h1>
+        <h2>BEYOND THE VOID</h2>
+
+        <p>
+            A dark collective forged within the eclipse.
+            Bound by loyalty, mystery, and the endless
+            blue abyss. Enter the realm of 224 and
+            become part of something greater.
+        </p>
+
+        <div class="btns">
+            <a href="#" class="btn primary">ENTER</a>
+            <a href="#" class="btn secondary">LEARN MORE</a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">THE ORDER</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>✞ Loyalty</h3>
+            <p>
+                United through trust, respect,
+                and a shared vision of the future.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>✞ Legacy</h3>
+            <p>
+                Every member leaves their mark
+                upon the growing history of 224.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>✞ Eclipse</h3>
+            <p>
+                Hidden within darkness, illuminated
+                only by the blue light of the void.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <span class="glow">✞ THE 224 DISCIPLES ✞</span><br><br>
+    Beyond The Void • Established 224
+</footer>
+
+</body>
+</html>
